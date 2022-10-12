@@ -1,15 +1,12 @@
 #!/bin/bash -e
 
-#TO="/media/daniell/Seagate Expansion Drive/Partitions/A/tmp use"
-TO="/home/daniell/Desktop"
+TO="/media/daniell/Seagate Expansion Drive/Partitions/A/tmp use"
 
 if [ "$1" = "from" ];then
-   #ipfs add -q --only-hash $(ls | tr -d "  " | tr '\n' ' ')
-   ipfs add -q --only-hash $(ls | tr -d "  " | tr '\n' ' ') > "$TO"/.rc-hashing_compare
-   #bash rc-hashing.sh to
+   ls | tr -d "  " | tr '\n' ' ' > "$TO"/.rc-list
+   ipfs add -q --only-hash $(ls | tr -d "  " | tr '\n' ' ') > .rc-hashing_compare
 fi
 
 if [ "$1" = "to" ];then
-   #cd cd "$TO"
-   ipfs add -q --only-hash $(cat "$TO"/.rc-hashing_compare)
+   ipfs add -q --only-hash $(cat .rc-list) > .rc-hashing_compare
 fi
