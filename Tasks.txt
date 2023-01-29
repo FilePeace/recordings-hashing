@@ -1,0 +1,4 @@
+- More verbose
+- Compare the .rc-hashing_compare files of "from" and "to" verbosely
+- rm the .rc-list file after done
+- add log files

@@ -1,0 +1,4 @@
+chown -h 1000:1000 './Tasks.txt'
+chmod 0777 './Tasks.txt'
+/usr/bin/touch -hcmd "2022-10-12 21:06:07.2963100000 -0300" './Tasks.txt'
+/usr/bin/touch -hcad "2023-01-03 00:58:16.1655169000 -0300" './Tasks.txt'
